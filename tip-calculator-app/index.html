@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
+
+
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <div class="container">
+    <img class="title" src="./images/logo.svg" alt="">
+      <div class="calcu__container">
+      
+        <div class="calcu__controls">
+          <p>Bill<p>
+          <div class="very-light-grayish-cyan space">
+            <span><img src="./images/icon-dollar.svg" alt=""></span>
+            <input type="text" class="bill" placeholder="0" required>
+          </div>
+
+          <p>Select Tip %</p>
+          <div class="btn__percentage space">
+            <button class="btn" value="5">5%</button>
+            <button class="btn" value="10">10%</button>
+            <button class="btn" value="15">15%</button>
+            <button class="btn" value="25">25%</button>
+            <button class="btn" value="50">50%</button>
+            <input type="text" class="custom" placeholder="CUSTOM"></input>
+          </div>
+
+          <p>Number of People</p>
+          <div class="very-light-grayish-cyan">
+            <span><img src="./images/icon-person.svg" alt=""></span>
+            <input type="text" class="person" placeholder="0" required>
+          </div> 
+        </div>
+
+        <div class="calcu__display">
+          <div class="display__container">
+
+            <div class="display">
+              <div>
+                <p>Tip Amount</p>
+                <p class="small">/ person</p>
+              </div>  
+              <div>
+                <h1 class="amount display__num">0</h1>
+              </div>
+            </div>
+
+            <div class="display margin-bot">
+              <div>
+                <p>Total</p>
+                <p class="small">/ person</p>
+              </div>
+              <div>
+                <h1 class="total display__num">0</h1>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="btn compute">Compute</button>
+              <button class="btn reset">reset</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

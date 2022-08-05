@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Space Mono', monospace;
+    border: 0;
+}
+
+:root{
+    --color-primary: hsl(172, 67%, 45%);
+
+    --color-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+p{
+    font-size: 0.8125rem;
+}
+
+input,
+span{
+    font-size: 1.5rem;
+}
+
+input{
+    background: transparent;
+    border: 2px solid transparent;
+    text-align: right;
+    color: var(--color-dark-cyan);
+}
+
+.very-light-grayish-cyan{
+    background: var(--color-very-light-grayish-cyan);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+    /* width: 23vw; */
+}
+
+/* .very-light-grayish-cyan input{
+    width: 10vw;
+} */
+
+.btn{
+    display: inline-block;
+    color: var(--color-white);
+    background: var(--color-dark-cyan);
+    cursor: pointer;
+    padding: .3rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 6rem;
+    transition: 150ms ease-in-out;
+}
+
+.active,
+.btn:hover,
+.btn:focus{
+    background: var(--color-primary);
+    color: var(--color-dark-cyan);
+}
+
+.custom{
+    font-size: 1rem;
+    text-align: center;
+    padding: .2rem 0;
+    color: var(--color-dark-cyan);
+    background: var(--color-light-grayish-cyan);
+    border-radius: 5px;
+    width: 6rem;
+}
+
+.buttons button{ 
+    padding: 0.2rem .8rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+body{
+    background: var(--color-light-grayish-cyan);
+    color: var(--color-dark-cyan);
+    font-weight: bold;
+}
+
+.title{
+    margin: 2rem 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    overflow-x: hidden;
+}
+
+.calcu__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem .5rem;
+    background: var(--color-white);
+    min-width: 100vw;
+    gap: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.calcu__container p{
+    margin-bottom: 1rem;
+}
+
+.btn__percentage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: .5rem;
+}
+
+.btn__percentage input,
+.btn__percentage button{
+    padding: .5rem;
+    width: 10rem;
+    text-align: center;
+}
+
+.space{
+    margin-bottom: 1rem;
+}
+
+.display__container{
+    background: var(--color-dark-cyan);
+    border-radius: 10px;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.margin-bot{
+    margin-bottom: 2rem;
+}
+
+.display p{
+    color: var(--color-white);
+    margin-bottom: 0;
+}
+
+.display h1{
+    color: var(--color-primary);
+}
+
+.buttons button{
+    background: var(--color-primary);
+}
+
+@media screen and (min-width: 700px) {
+    /* .title{
+        margin: ;
+    } */
+
+    .calcu__container{
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem .5rem;
+        min-width: 60vw;
+        border-radius: 10px;
+        margin-bottom: 4rem;
+    }
+
+    .btn__percentage{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .btn__percentage input,
+    .btn__percentage button{
+        padding: .5rem;
+        max-width: 7rem;
+        text-align: center;
+    }
+
+    .display{
+        justify-content: space-between;
+    }
+
+    .buttons button{
+        width: 10rem;
+        margin-top: 11rem;
+    }
+}
